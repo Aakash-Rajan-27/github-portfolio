@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
-  <title>Aakash Rajan | Mechanical Engineering &amp; Robotics, IIT Madras</title>
+  <title>Aakash Rajan | Mechanical Engineering, IIT Madras</title>
   <meta name="description"
     content="Aakash Rajan — B.Tech Mechanical Engineering student at IIT Madras. Research interests in world models, robot learning, and computational fluid dynamics." />
   <meta name="keywords"
@@ -43,12 +43,13 @@
     <!-- ***** Profile Sidebar ***** -->
     <aside class="profile">
       <div class="profile__card">
-        <!-- TODO: replace with a real photo at ./images/profile.jpg -->
+        <!-- TODO: replace the initials block with a real photo:
+             <img class="profile__avatar" src="./images/profile.jpg" alt="Aakash Rajan" /> -->
         <div class="profile__avatar" aria-hidden="true">AR</div>
 
         <h1 class="profile__name">Aakash Rajan</h1>
         <!-- To show pronouns, uncomment and edit: <p class="profile__pronouns">(they/them)</p> -->
-        <p class="profile__role">Mechanical Engineering &amp; Robotics</p>
+        <p class="profile__role">Mechanical Engineering</p>
         <p class="profile__org">Indian Institute of Technology Madras</p>
 
         <ul class="profile__socials">
@@ -94,7 +95,7 @@
 
       <!-- ***** Bio / About ***** -->
       <section class="section" id="bio">
-        <h2 class="section__title"><span class="section__icon">◆</span> Bio</h2>
+        <h2 class="section__title">Bio</h2>
         <p class="lead">
           I'm a B.Tech student in Mechanical Engineering at <strong>IIT Madras</strong> (2024&ndash;2028),
           working at the intersection of robotics, machine learning, and applied physics. My current
@@ -108,7 +109,7 @@
 
       <!-- ***** Research Interests ***** -->
       <section class="section" id="interests">
-        <h2 class="section__title"><span class="section__icon">✦</span> Research Interests</h2>
+        <h2 class="section__title">Research Interests</h2>
         <ul class="pills">
           <li class="pill">World Models</li>
           <li class="pill">Robot Learning</li>
@@ -122,7 +123,7 @@
 
       <!-- ***** Education ***** -->
       <section class="section" id="education">
-        <h2 class="section__title"><span class="section__icon">🎓</span> Education</h2>
+        <h2 class="section__title">Education</h2>
         <div class="cards">
           <article class="card">
             <h3 class="card__title">B.Tech, Mechanical Engineering</h3>
@@ -130,24 +131,119 @@
             <p class="card__dates">2024 &mdash; 2028</p>
             <p class="card__note">CGPA 9.03 / 10</p>
           </article>
-          <article class="card">
-            <h3 class="card__title">ISC &mdash; Class XII</h3>
-            <p class="card__meta">Head Start Educational Academy</p>
-            <p class="card__dates">2024</p>
-            <p class="card__note">96%</p>
+        </div>
+      </section>
+
+      <!-- ***** Projects ***** -->
+      <section class="section" id="projects">
+        <h2 class="section__title">Projects</h2>
+        <p class="section__sub">Selected projects and research I've worked on.</p>
+
+        <div class="filters" id="projectFilters">
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="robotics">Robotics &amp; AI</button>
+          <button class="filter" data-filter="cfd">CFD &amp; Thermal</button>
+          <button class="filter" data-filter="hardware">Hardware</button>
+        </div>
+
+        <div class="projects" id="projectGrid">
+
+          <!-- To add a photo: drop an image at the src path below (create images/projects/).
+               If the file is missing the card simply shows a neutral placeholder. -->
+
+          <article class="project" data-category="robotics">
+            <div class="project__image">
+              <img src="./images/projects/atc-marl.jpg" alt="Multi-Agent RL for Air Traffic Control" loading="lazy" onerror="this.remove()" />
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Multi-Agent RL for Air Traffic Control</h3>
+              <div class="project__tags"><span class="tag">Ongoing</span><span class="tag">Robotics &amp; AI</span></div>
+              <p class="project__desc">Training cooperative multi-agent reinforcement learning policies for
+                decentralized air traffic control &mdash; learning conflict resolution and sequencing
+                under dense, dynamic airspace constraints.</p>
+              <div class="project__links">
+                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
+                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
+              </div>
+            </div>
           </article>
-          <article class="card">
-            <h3 class="card__title">ICSE &mdash; Class X</h3>
-            <p class="card__meta">Head Start Educational Academy</p>
-            <p class="card__dates">2022</p>
-            <p class="card__note">89%</p>
+
+          <article class="project" data-category="robotics">
+            <div class="project__image">
+              <img src="./images/projects/world-models.jpg" alt="Geometry-Aware World Models" loading="lazy" onerror="this.remove()" />
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Geometry-Aware World Models</h3>
+              <div class="project__tags"><span class="tag">Ongoing</span><span class="tag">Robotics &amp; AI</span></div>
+              <p class="project__desc">Novel closed-loop, geometry-aware terms for video world models.
+                A memory-retrieval mechanism for WorldPack improved SSIM ~3.5% / LPIPS ~3% over baseline
+                on LoopNav, with RoPE and geometric/semantic attention conditioning on the NWM backbone.</p>
+              <div class="project__links">
+                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
+                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
+              </div>
+            </div>
           </article>
+
+          <article class="project" data-category="robotics">
+            <div class="project__image">
+              <img src="./images/projects/dump-truck.jpg" alt="Autonomous Dump-Truck Simulator" loading="lazy" onerror="this.remove()" />
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Autonomous Dump-Truck Simulator</h3>
+              <div class="project__tags"><span class="tag">2026</span><span class="tag">National Winner</span></div>
+              <p class="project__desc">Led a team of 3 to a national win in the Caterpillar Challenge
+                (7500+ competitors). A Python multi-agent simulator for autonomous dump packing solving
+                task selection and optimal assignment via a Hungarian algorithm and MCTS, with vehicle
+                dynamics and path planning for reverse maneuvers.</p>
+              <div class="project__links">
+                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
+                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-category="cfd">
+            <div class="project__image">
+              <img src="./images/projects/cooling-jacket.jpg" alt="Hub-Motor Cooling Jacket" loading="lazy" onerror="this.remove()" />
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Hub-Motor Cooling Jacket</h3>
+              <div class="project__tags"><span class="tag">2025</span><span class="tag">CFD &amp; Thermal</span></div>
+              <p class="project__desc">Designed a lattice-structured cooling jacket for an electric hub
+                motor optimizing pressure drop and heat-transfer coefficient. Built a MATLAB iterative
+                solver for loop head loss, coupled with multi-phase CFD thermal analysis.</p>
+              <div class="project__links">
+                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
+                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-category="hardware">
+            <div class="project__image">
+              <img src="./images/projects/medicine-dispenser.jpg" alt="Automated Medicine Dispenser" loading="lazy" onerror="this.remove()" />
+            </div>
+            <div class="project__body">
+              <h3 class="project__title">Automated Medicine Dispenser</h3>
+              <div class="project__tags"><span class="tag">2026</span><span class="tag">Best in Batch</span></div>
+              <p class="project__desc">End-to-end mechatronics course project (ME2400): designed the
+                pipeline, selected and integrated sensors/actuators, built CAD models, assembled the
+                system, and programmed its functionality. Awarded best project in the batch by the
+                former HOD, Prof. Chandramouli.</p>
+              <div class="project__links">
+                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
+                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
+              </div>
+            </div>
+          </article>
+
         </div>
       </section>
 
       <!-- ***** Experience ***** -->
       <section class="section" id="experience">
-        <h2 class="section__title"><span class="section__icon">❖</span> Experience</h2>
+        <h2 class="section__title">Experience</h2>
         <div class="timeline">
           <article class="timeline__item">
             <div class="timeline__head">
@@ -184,127 +280,9 @@
         </div>
       </section>
 
-      <!-- ***** Projects ***** -->
-      <section class="section" id="projects">
-        <h2 class="section__title"><span class="section__icon">▣</span> Projects</h2>
-        <p class="section__sub">Selected projects and research I've worked on.</p>
-
-        <div class="filters" id="projectFilters">
-          <button class="filter is-active" data-filter="all">All</button>
-          <button class="filter" data-filter="robotics">Robotics &amp; AI</button>
-          <button class="filter" data-filter="cfd">CFD &amp; Aerodynamics</button>
-          <button class="filter" data-filter="hardware">Hardware</button>
-          <button class="filter" data-filter="misc">Miscellaneous</button>
-        </div>
-
-        <div class="projects" id="projectGrid">
-
-          <article class="project" data-category="robotics">
-            <div class="project__body">
-              <h3 class="project__title">Geometry-Aware World Models</h3>
-              <div class="project__tags"><span class="tag">2026</span><span class="tag">Robotics &amp; AI</span></div>
-              <p class="project__desc">Novel closed-loop, geometry-aware terms for video world models.
-                A memory-retrieval mechanism for WorldPack improved SSIM ~3.5% / LPIPS ~3% over baseline
-                on LoopNav, with RoPE and geometric/semantic attention conditioning on the NWM backbone.</p>
-              <div class="project__links">
-                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
-                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project" data-category="robotics">
-            <div class="project__body">
-              <h3 class="project__title">Autonomous Dump-Truck Simulator</h3>
-              <div class="project__tags"><span class="tag">2026</span><span class="tag">National Winner</span></div>
-              <p class="project__desc">Led a team of 3 to a national win in the Caterpillar Challenge
-                (7500+ competitors). A Python multi-agent simulator for autonomous dump packing solving
-                task selection and optimal assignment via a Hungarian algorithm and MCTS, with vehicle
-                dynamics and path planning for reverse maneuvers.</p>
-              <div class="project__links">
-                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
-                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project" data-category="cfd">
-            <div class="project__body">
-              <h3 class="project__title">Hub-Motor Cooling Jacket</h3>
-              <div class="project__tags"><span class="tag">2025</span><span class="tag">CFD &amp; Thermal</span></div>
-              <p class="project__desc">Designed a lattice-structured cooling jacket for an electric hub
-                motor optimizing pressure drop and heat-transfer coefficient. Built a MATLAB iterative
-                solver for loop head loss, coupled with multi-phase CFD thermal analysis.</p>
-              <div class="project__links">
-                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
-                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project" data-category="cfd">
-            <div class="project__body">
-              <h3 class="project__title">High-Lift Aerodynamics for STOL</h3>
-              <div class="project__tags"><span class="tag">2025</span><span class="tag">Inter-IIT Tech</span></div>
-              <p class="project__desc">LAT Aerospace problem statement on high-lift optimization for STOL
-                aircraft. Ran extensive CFD to compare and propose aerodynamic solutions, and developed
-                a toolpath to manufacture a modified airfoil (with USB) for wind-tunnel testing.</p>
-              <div class="project__links">
-                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
-                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project" data-category="hardware">
-            <div class="project__body">
-              <h3 class="project__title">Automated Medicine Dispenser</h3>
-              <div class="project__tags"><span class="tag">2026</span><span class="tag">Best in Batch</span></div>
-              <p class="project__desc">End-to-end mechatronics course project (ME2400): designed the
-                pipeline, selected and integrated sensors/actuators, built CAD models, assembled the
-                system, and programmed its functionality. Awarded best project in the batch by the
-                former HOD, Prof. Chandramouli.</p>
-              <div class="project__links">
-                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
-                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project" data-category="hardware">
-            <div class="project__body">
-              <h3 class="project__title">Composite Front-Wing Analysis</h3>
-              <div class="project__tags"><span class="tag">2025</span><span class="tag">FEA</span></div>
-              <p class="project__desc">Failure analysis of the car's front wing using Ansys Composite
-                PrepPost (ACP). Optimized structure so deflection stayed within FSAE regulations for
-                specified load cases, validated against real-world deflection testing.</p>
-              <div class="project__links">
-                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
-                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project" data-category="misc">
-            <div class="project__body">
-              <h3 class="project__title">Formula Bharat Business Plan</h3>
-              <div class="project__tags"><span class="tag">2025</span><span class="tag">Runners-Up</span></div>
-              <p class="project__desc">Ideated a full business plan for the Business Plan Presentation at
-                Formula Bharat 2026, placing 2nd of 40+ teams. Led market analysis and supply-chain
-                optimization (TCO, market sizing, CAC estimation) and built the pitch deck and finance
-                sheets.</p>
-              <div class="project__links">
-                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </section>
-
       <!-- ***** Contact ***** -->
       <section class="section" id="contact">
-        <h2 class="section__title"><span class="section__icon">✉</span> Contact</h2>
+        <h2 class="section__title">Contact</h2>
         <p class="lead">
           Interested in research collaborations, robotics, or just want to say hi? The quickest way to
           reach me is by email &mdash; I'll do my best to reply.
@@ -316,7 +294,7 @@
       </section>
 
       <footer class="footer">
-        <p>&copy; <span id="year">2026</span> Aakash Rajan. Built with plain HTML, CSS &amp; JS.</p>
+        <p>&copy; <span id="year">2026</span> Aakash Rajan.</p>
       </footer>
 
     </main>

@@ -11,8 +11,7 @@
   /* ---- Theme (persisted, respects OS preference) ---- */
   var themeToggle = document.getElementById("themeToggle");
   var stored = localStorage.getItem("theme");
-  var prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
-  var initial = stored || (prefersLight ? "light" : "dark");
+  var initial = stored || "light";
   setTheme(initial);
 
   function setTheme(mode) {
