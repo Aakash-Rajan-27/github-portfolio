@@ -1,273 +1,328 @@
-<!-- 
-  Hello 😊.
-
-  This template is designed and developed by Nisar Hassan Naqvi
-  for anyone to use for free or customize the way they like.
-
-  Github Repo: https://github.com/nisarhassan12/portfolio-template/
-  My Website: https://nisar.dev
-
-  For business & inquires, contact me => syednisarhassan12@gmail.com
--->
-
-<!--
-  Follow the instructions written in comments to create your stunning portfolio
--->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
-  <!-- Put your site title here -->
-  <title>
-    Aakash Rajan | Portfolio
-  </title>
-
-  <meta name="description" content="Portfolio of Aakash Rajan.">
-  <!-- TODO: Add your skills and coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Aakash Rajan, portfolio" />
+  <title>Aakash Rajan | Mechanical Engineering &amp; Robotics, IIT Madras</title>
+  <meta name="description"
+    content="Aakash Rajan — B.Tech Mechanical Engineering student at IIT Madras. Research interests in world models, robot learning, and computational fluid dynamics." />
+  <meta name="keywords"
+    content="Aakash Rajan, IIT Madras, robotics, world models, robot learning, CFD, aerodynamics, machine learning, mechanical engineering" />
   <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
 
-  <!-- ***** Header ***** -->
+  <!-- ***** Top Navigation ***** -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand">Aakash Rajan</a>
 
-  <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
-        </ul>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__menu" id="navMenu">
+        <a href="#bio" class="nav__link">Bio</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#experience" class="nav__link">Experience</a>
+        <a href="#contact" class="nav__link">Contact</a>
+        <a href="./Aakash_Rajan_CV.pdf" class="nav__link nav__link--cv" target="_blank">CV</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
+          <span class="theme-toggle__icon">☾</span>
+        </button>
       </nav>
-    </div>
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <span>Aakash Rajan</span>
-        </h1>
-        <!-- TODO: Put a small paragraph about yourself here -->
-        <p>A short tagline about yourself goes here.</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
-      </div>
     </div>
   </header>
 
-  <main role="main">
+  <div class="layout row">
 
-    <!-- ***** Work ***** -->
+    <!-- ***** Profile Sidebar ***** -->
+    <aside class="profile">
+      <div class="profile__card">
+        <!-- TODO: replace with a real photo at ./images/profile.jpg -->
+        <div class="profile__avatar" aria-hidden="true">AR</div>
 
-    <section class="work" id="work">
-      <div class="row">
-        <h2>My Work</h2>
-        <div class="work__boxes">
+        <h1 class="profile__name">Aakash Rajan</h1>
+        <!-- To show pronouns, uncomment and edit: <p class="profile__pronouns">(they/them)</p> -->
+        <p class="profile__role">Mechanical Engineering &amp; Robotics</p>
+        <p class="profile__org">Indian Institute of Technology Madras</p>
 
-          <!-- Each div with the work__box class is a project. -->
+        <ul class="profile__socials">
+          <li>
+            <a href="mailto:me24b072@smail.iitm.ac.in" title="Email" aria-label="Email">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 4-8 5-8-5V6l8 5 8-5z"/></svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Aakash-Rajan-27" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.68.92.68 1.85V21c0 .27.16.59.67.5A10 10 0 0 0 22 12 10 10 0 0 0 12 2z"/></svg>
+            </a>
+          </li>
+          <li>
+            <!-- TODO: add your LinkedIn URL -->
+            <a href="#" title="LinkedIn" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM8.34 18.34V9.9H5.67v8.44zM7 8.53a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1m11.34 9.81v-4.63c0-2.47-1.32-3.62-3.08-3.62a2.66 2.66 0 0 0-2.41 1.32V9.9H10.2v8.44h2.66v-4.46c0-1.18.22-2.32 1.68-2.32s1.46 1.35 1.46 2.4v4.38z"/></svg>
+            </a>
+          </li>
+          <li>
+            <!-- TODO: add your X / Twitter URL -->
+            <a href="#" title="X / Twitter" aria-label="X" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.15h7.59l5.24 6.93zm-1.29 19.5h2.04L6.49 3.24H4.3z"/></svg>
+            </a>
+          </li>
+          <li>
+            <!-- TODO: add your Google Scholar URL -->
+            <a href="#" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 3 1 9l11 6 9-4.91V17h2V9zM5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+            </a>
+          </li>
+        </ul>
 
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Portfolio Template</h3>
-              <p>
-                A free Open Source Portfolio for anyone to use for free.
-              </p>
-              <ul class="work__list">
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>JavaScript</li>
-                <li>Parcel</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Calculator</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Notificator</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-3.png" class="work__image" alt="Project 3" />
-            </div>
-          </div>
-        </div>
+        <a href="./Aakash_Rajan_CV.pdf" class="btn btn--primary" target="_blank">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 16 6 10l1.41-1.41L11 12.17V2h2v10.17l3.59-3.58L18 10zm-8 4h16v2H4z"/></svg>
+          Download CV
+        </a>
       </div>
-    </section>
+    </aside>
 
-    <!-- ***** Clients ***** -->
+    <!-- ***** Main Content ***** -->
+    <main class="content" role="main">
 
-    <section class="client" id="clients">
-      <div class="row">
-        <h2>Clients</h2>
-        <div class="client__logos">
-          <!-- Add logos of the clients or companies you'have worked with. -->
-          <img src="./images/ronjones.png" class="client__logo" alt="Company 2" />
-          <img src="./images/goldengrid.png" class="client__logo" alt="Company 3" />
-          <img src="./images/bullseye.png" class="client__logo" alt="Company 1" />
-          <img src="./images/mighty-furnitures.png" class="client__logo" alt="Company 1" />
-          <img src="./images/fastlane.png" class="client__logo" alt="Company 3" />
-          <img src="./images/chippy.png" class="client__logo" alt="Company 1" />
-        </div>
-      </div>
-    </section>
-
-    <!-- ***** About ***** -->
-
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos id
-              nostrum illo harum blanditiis, tenetur eum suscipit cupiditate
-              in vel, ex quam quidem quos mollitia labore aut sunt eius
-              ratione molestiae fuga veniam facere similique voluptate.
-            </p>
-            <!-- Provide a link to your resume -->
-            <a href="#" class="btn">My Resume</a>
-          </div>
-
-          <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ***** Contact ***** -->
-
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
-      <div class="contact__info">
-        <p>
-          Are you looking for a fast-performing and user-friendly website to
-          represent your product or business? or looking for any kind of
-          consultation? or want to ask questions? or have some advice for me
-          or just want to say "Hi 👋" in any case feel free to Let me know. I
-          will do my best to respond back. 😊 The quickest way to reach out to
-          me is via an email.
+      <!-- ***** Bio / About ***** -->
+      <section class="section" id="bio">
+        <h2 class="section__title"><span class="section__icon">◆</span> Bio</h2>
+        <p class="lead">
+          I'm a B.Tech student in Mechanical Engineering at <strong>IIT Madras</strong> (2024&ndash;2028),
+          working at the intersection of robotics, machine learning, and applied physics. My current
+          research at the <strong>HiRo Lab, IISc</strong> focuses on making video world models more
+          geometry-aware for closed-loop navigation. Alongside research, I build things &mdash; from a
+          national-winning autonomous dump-truck simulator to CFD-optimized cooling systems for
+          Formula Student. I care about work that connects rigorous modelling with something you can
+          actually deploy.
         </p>
-        <a href="mailto:me24b072@smail.iitm.ac.in" class="btn">me24b072@smail.iitm.ac.in</a>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- ***** Footer ***** -->
+      <!-- ***** Research Interests ***** -->
+      <section class="section" id="interests">
+        <h2 class="section__title"><span class="section__icon">✦</span> Research Interests</h2>
+        <ul class="pills">
+          <li class="pill">World Models</li>
+          <li class="pill">Robot Learning</li>
+          <li class="pill">Computer Vision</li>
+          <li class="pill">Reinforcement Learning</li>
+          <li class="pill">CFD &amp; Aerodynamics</li>
+          <li class="pill">Vehicle Dynamics</li>
+          <li class="pill">Control Systems</li>
+        </ul>
+      </section>
 
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <!-- TODO: Update the placeholder links (#) to point to your accounts -->
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="#" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://github.com/Aakash-Rajan-27/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="#" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="#" title="Link to Linkedin Profile">
-            <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
-          </a>
-        </li>
-      </ul>
+      <!-- ***** Education ***** -->
+      <section class="section" id="education">
+        <h2 class="section__title"><span class="section__icon">🎓</span> Education</h2>
+        <div class="cards">
+          <article class="card">
+            <h3 class="card__title">B.Tech, Mechanical Engineering</h3>
+            <p class="card__meta">Indian Institute of Technology Madras</p>
+            <p class="card__dates">2024 &mdash; 2028</p>
+            <p class="card__note">CGPA 9.03 / 10</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">ISC &mdash; Class XII</h3>
+            <p class="card__meta">Head Start Educational Academy</p>
+            <p class="card__dates">2024</p>
+            <p class="card__note">96%</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">ICSE &mdash; Class X</h3>
+            <p class="card__meta">Head Start Educational Academy</p>
+            <p class="card__dates">2022</p>
+            <p class="card__note">89%</p>
+          </article>
+        </div>
+      </section>
 
-      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
-      <p>
-        &copy; 2026 Aakash Rajan &mdash; Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
-      </p>
-      <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
-      </div>
-    </div>
-  </footer>
+      <!-- ***** Experience ***** -->
+      <section class="section" id="experience">
+        <h2 class="section__title"><span class="section__icon">❖</span> Experience</h2>
+        <div class="timeline">
+          <article class="timeline__item">
+            <div class="timeline__head">
+              <h3>Research Intern &mdash; World Models</h3>
+              <span class="timeline__date">Ongoing</span>
+            </div>
+            <p class="timeline__org">HiRo Lab, IISc &middot; Prof. Ravi Prakash</p>
+            <p>Modifying, training and running inference on video world models (Gaussian World Model,
+              DINOv3, &pi;0.5). Innovated a memory-retrieval term for WorldPack, improving SSIM ~3.5% /
+              LPIPS ~3% over baseline on LoopNav; prototyped RoPE, trajectory packing, and
+              geometric/semantic attention conditioning on the NWM backbone.</p>
+          </article>
 
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
-  </a>
+          <article class="timeline__item">
+            <div class="timeline__head">
+              <h3>Aerodynamics &amp; Cooling Engineer</h3>
+              <span class="timeline__date">2025</span>
+            </div>
+            <p class="timeline__org">Raftar Formula Racing, IIT Madras</p>
+            <p>Designed and manufactured aerodynamic components and cooling strategies; owned
+              procurement, manufacturing and assembly of all carbon-fiber components while integrating
+              vehicle dynamics and power electronics.</p>
+          </article>
+
+          <article class="timeline__item">
+            <div class="timeline__head">
+              <h3>Music Contingent Head (Piano)</h3>
+              <span class="timeline__date">2025</span>
+            </div>
+            <p class="timeline__org">Inter-IIT Cultural Meet 8.0 &middot; IIT Madras</p>
+            <p>Led an 8-member band as Music Director; represented IIT Madras as lead keyboardist,
+              placing 4th among 23 IITs. ABRSM Grade 8 (Merit).</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- ***** Projects ***** -->
+      <section class="section" id="projects">
+        <h2 class="section__title"><span class="section__icon">▣</span> Projects</h2>
+        <p class="section__sub">Selected projects and research I've worked on.</p>
+
+        <div class="filters" id="projectFilters">
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="robotics">Robotics &amp; AI</button>
+          <button class="filter" data-filter="cfd">CFD &amp; Aerodynamics</button>
+          <button class="filter" data-filter="hardware">Hardware</button>
+          <button class="filter" data-filter="misc">Miscellaneous</button>
+        </div>
+
+        <div class="projects" id="projectGrid">
+
+          <article class="project" data-category="robotics">
+            <div class="project__body">
+              <h3 class="project__title">Geometry-Aware World Models</h3>
+              <div class="project__tags"><span class="tag">2026</span><span class="tag">Robotics &amp; AI</span></div>
+              <p class="project__desc">Novel closed-loop, geometry-aware terms for video world models.
+                A memory-retrieval mechanism for WorldPack improved SSIM ~3.5% / LPIPS ~3% over baseline
+                on LoopNav, with RoPE and geometric/semantic attention conditioning on the NWM backbone.</p>
+              <div class="project__links">
+                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
+                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-category="robotics">
+            <div class="project__body">
+              <h3 class="project__title">Autonomous Dump-Truck Simulator</h3>
+              <div class="project__tags"><span class="tag">2026</span><span class="tag">National Winner</span></div>
+              <p class="project__desc">Led a team of 3 to a national win in the Caterpillar Challenge
+                (7500+ competitors). A Python multi-agent simulator for autonomous dump packing solving
+                task selection and optimal assignment via a Hungarian algorithm and MCTS, with vehicle
+                dynamics and path planning for reverse maneuvers.</p>
+              <div class="project__links">
+                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
+                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-category="cfd">
+            <div class="project__body">
+              <h3 class="project__title">Hub-Motor Cooling Jacket</h3>
+              <div class="project__tags"><span class="tag">2025</span><span class="tag">CFD &amp; Thermal</span></div>
+              <p class="project__desc">Designed a lattice-structured cooling jacket for an electric hub
+                motor optimizing pressure drop and heat-transfer coefficient. Built a MATLAB iterative
+                solver for loop head loss, coupled with multi-phase CFD thermal analysis.</p>
+              <div class="project__links">
+                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
+                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-category="cfd">
+            <div class="project__body">
+              <h3 class="project__title">High-Lift Aerodynamics for STOL</h3>
+              <div class="project__tags"><span class="tag">2025</span><span class="tag">Inter-IIT Tech</span></div>
+              <p class="project__desc">LAT Aerospace problem statement on high-lift optimization for STOL
+                aircraft. Ran extensive CFD to compare and propose aerodynamic solutions, and developed
+                a toolpath to manufacture a modified airfoil (with USB) for wind-tunnel testing.</p>
+              <div class="project__links">
+                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
+                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-category="hardware">
+            <div class="project__body">
+              <h3 class="project__title">Automated Medicine Dispenser</h3>
+              <div class="project__tags"><span class="tag">2026</span><span class="tag">Best in Batch</span></div>
+              <p class="project__desc">End-to-end mechatronics course project (ME2400): designed the
+                pipeline, selected and integrated sensors/actuators, built CAD models, assembled the
+                system, and programmed its functionality. Awarded best project in the batch by the
+                former HOD, Prof. Chandramouli.</p>
+              <div class="project__links">
+                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
+                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-category="hardware">
+            <div class="project__body">
+              <h3 class="project__title">Composite Front-Wing Analysis</h3>
+              <div class="project__tags"><span class="tag">2025</span><span class="tag">FEA</span></div>
+              <p class="project__desc">Failure analysis of the car's front wing using Ansys Composite
+                PrepPost (ACP). Optimized structure so deflection stayed within FSAE regulations for
+                specified load cases, validated against real-world deflection testing.</p>
+              <div class="project__links">
+                <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
+                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-category="misc">
+            <div class="project__body">
+              <h3 class="project__title">Formula Bharat Business Plan</h3>
+              <div class="project__tags"><span class="tag">2025</span><span class="tag">Runners-Up</span></div>
+              <p class="project__desc">Ideated a full business plan for the Business Plan Presentation at
+                Formula Bharat 2026, placing 2nd of 40+ teams. Led market analysis and supply-chain
+                optimization (TCO, market sizing, CAC estimation) and built the pitch deck and finance
+                sheets.</p>
+              <div class="project__links">
+                <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ***** Contact ***** -->
+      <section class="section" id="contact">
+        <h2 class="section__title"><span class="section__icon">✉</span> Contact</h2>
+        <p class="lead">
+          Interested in research collaborations, robotics, or just want to say hi? The quickest way to
+          reach me is by email &mdash; I'll do my best to reply.
+        </p>
+        <div class="contact__actions">
+          <a href="mailto:me24b072@smail.iitm.ac.in" class="btn btn--primary">me24b072@smail.iitm.ac.in</a>
+          <a href="https://github.com/Aakash-Rajan-27" class="btn btn--ghost" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>&copy; <span id="year">2026</span> Aakash Rajan. Built with plain HTML, CSS &amp; JS.</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <a href="#top" class="back-to-top" title="Back to top" aria-label="Back to top">↑</a>
   <script src="./index.js"></script>
 </body>
 
