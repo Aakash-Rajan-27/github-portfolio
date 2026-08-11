@@ -95,13 +95,13 @@
       <section class="section" id="bio">
         <h2 class="section__title">Bio</h2>
         <p class="lead">
-          I'm a B.Tech student in Mechanical Engineering at <strong>IIT Madras</strong> (2024&ndash;2028),
-          working at the intersection of robotics, machine learning, and applied physics. My current
-          research at the <strong>HiRo Lab, IISc</strong> focuses on making video world models more
-          geometry-aware for closed-loop navigation. Alongside research, I build things &mdash; from a
-          national-winning autonomous dump-truck simulator to CFD-optimized cooling systems for
-          Formula Student. I care about work that connects rigorous modelling with something you can
-          actually deploy.
+          Hi! I'm a 3rd year B.Tech student in Mechanical Engineering at IIT Madras. My
+          research interests lie at the intersection of robotics, complex systems and optimization. 
+          My current research at the HiRo Lab, IISc focuses on 
+          making video world models more geometry-aware for 
+          closed-loop navigation. Aside from research, I'm a passionate musician
+          that likes to compose and discover new music. 
+          
         </p>
       </section>
 
@@ -109,13 +109,10 @@
       <section class="section" id="interests">
         <h2 class="section__title">Research Interests</h2>
         <ul class="pills">
-          <li class="pill">World Models</li>
           <li class="pill">Robot Learning</li>
-          <li class="pill">Computer Vision</li>
-          <li class="pill">Reinforcement Learning</li>
-          <li class="pill">CFD &amp; Aerodynamics</li>
-          <li class="pill">Vehicle Dynamics</li>
+          <li class="pill">Multi-Agent Systems</li>
           <li class="pill">Control Systems</li>
+          <li class="pill">Optimization</li>
         </ul>
       </section>
 
@@ -156,9 +153,13 @@
             <div class="project__body">
               <h3 class="project__title">Multi-Agent RL for Air Traffic Control</h3>
               <div class="project__tags"><span class="tag">Ongoing</span><span class="tag">Robotics &amp; AI</span></div>
-              <p class="project__desc">Training cooperative multi-agent reinforcement learning policies for
-                decentralized air traffic control &mdash; learning conflict resolution and sequencing
-                under dense, dynamic airspace constraints.</p>
+              <p class="project__desc">Competition hosted by AI4REALNET & TU Delft. Training cooperative 
+              multi-agent reinforcement learning policies to achieve 
+              decentralized air traffic control. Aiming to improve conflict 
+              resolution and cooperation under dense, dynamic airspace 
+              constraints.
+
+              </p>
               <div class="project__links">
                 <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
                 <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
@@ -175,7 +176,7 @@
               <div class="project__tags"><span class="tag">Ongoing</span><span class="tag">Robotics &amp; AI</span></div>
               <p class="project__desc">Novel closed-loop, geometry-aware terms for video world models.
                 A memory-retrieval mechanism for WorldPack improved SSIM ~3.5% / LPIPS ~3% over baseline
-                on LoopNav, with RoPE and geometric/semantic attention conditioning on the NWM backbone.</p>
+                on LoopNav, with RoPE and geometric/semantic attention (using DinoV3) conditioning on the NWM backbone.</p>
               <div class="project__links">
                 <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
                 <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
@@ -189,11 +190,14 @@
             </div>
             <div class="project__body">
               <h3 class="project__title">Autonomous Dump-Truck Simulator</h3>
-              <div class="project__tags"><span class="tag">2026</span><span class="tag">National Winner</span></div>
-              <p class="project__desc">Led a team of 3 to a national win in the Caterpillar Challenge
-                (7500+ competitors). A Python multi-agent simulator for autonomous dump packing solving
-                task selection and optimal assignment via a Hungarian algorithm and MCTS, with vehicle
-                dynamics and path planning for reverse maneuvers.</p>
+              <div class="project__tags"><span class="tag">2026</span><span class="tag">National Winner</span><span class="tag">Robotics &amp; AI</span></div>
+              <p class="project__desc">Won a National Tech Challenge hosted by Caterpillar. 
+                Built and tested a Pygame Multi-Agent Autonomous Dump Truck Simulator to optimize 
+                packing density of a paddock dump by innovatively integrating task selection (Heuristics, 
+                MCTS), task assignment using Combinatorial optimization (Hungarian Algorithm)
+                and Multi Agent Path Finding (MAPF) with vehicle dynamics (Hybrid A* - CBS) 
+                for maximum realism and efficiency. 
+              </p>
               <div class="project__links">
                 <a class="pbtn" href="#" target="_blank" rel="noopener" title="Code coming soon">Code</a>
                 <a class="pbtn pbtn--ghost" href="#" target="_blank" rel="noopener" title="Report coming soon">Report</a>
@@ -208,7 +212,7 @@
             <div class="project__body">
               <h3 class="project__title">Hub-Motor Cooling Jacket</h3>
               <div class="project__tags"><span class="tag">2025</span><span class="tag">CFD &amp; Thermal</span></div>
-              <p class="project__desc">Designed a lattice-structured cooling jacket for an electric hub
+              <p class="project__desc">Designed a lattice-strut based cooling jacket for an electric hub
                 motor optimizing pressure drop and heat-transfer coefficient. Built a MATLAB iterative
                 solver for loop head loss, coupled with multi-phase CFD thermal analysis.</p>
               <div class="project__links">
@@ -223,7 +227,7 @@
               <img src="./images/projects/medicine-dispenser.jpg" alt="Automated Medicine Dispenser" loading="lazy" onerror="this.remove()" />
             </div>
             <div class="project__body">
-              <h3 class="project__title">Automated Medicine Dispenser</h3>
+              <h3 class="project__title">Automated Medicine Dispenser - Course Project</h3>
               <div class="project__tags"><span class="tag">2026</span><span class="tag">Best in Batch</span></div>
               <p class="project__desc">End-to-end mechatronics course project (ME2400): designed the
                 pipeline, selected and integrated sensors/actuators, built CAD models, assembled the
@@ -249,31 +253,23 @@
               <span class="timeline__date">Ongoing</span>
             </div>
             <p class="timeline__org">HiRo Lab, IISc &middot; Prof. Ravi Prakash</p>
-            <p>Modifying, training and running inference on video world models (Gaussian World Model,
-              DINOv3, &pi;0.5). Innovated a memory-retrieval term for WorldPack, improving SSIM ~3.5% /
-              LPIPS ~3% over baseline on LoopNav; prototyped RoPE, trajectory packing, and
-              geometric/semantic attention conditioning on the NWM backbone.</p>
           </article>
 
           <article class="timeline__item">
             <div class="timeline__head">
-              <h3>Aerodynamics &amp; Cooling Engineer</h3>
+              <h3>Music Contingent Head</h3>
+              <span class="timeline__date">Ongoing</span>
+            </div>
+            <p class="timeline__org">Inter-IIT Cultural Meet 8.0 &middot; IIT Madras</p>
+
+          </article>
+
+          <article class="timeline__item">
+            <div class="timeline__head">
+              <h3>Aerodynamics &amp; Cooling Engineer - Formula Student</h3>
               <span class="timeline__date">2025</span>
             </div>
             <p class="timeline__org">Raftar Formula Racing, IIT Madras</p>
-            <p>Designed and manufactured aerodynamic components and cooling strategies; owned
-              procurement, manufacturing and assembly of all carbon-fiber components while integrating
-              vehicle dynamics and power electronics.</p>
-          </article>
-
-          <article class="timeline__item">
-            <div class="timeline__head">
-              <h3>Music Contingent Head (Piano)</h3>
-              <span class="timeline__date">2025</span>
-            </div>
-            <p class="timeline__org">Inter-IIT Cultural Meet 8.0 &middot; IIT Madras</p>
-            <p>Led an 8-member band as Music Director; represented IIT Madras as lead keyboardist,
-              placing 4th among 23 IITs. ABRSM Grade 8 (Merit).</p>
           </article>
         </div>
       </section>
